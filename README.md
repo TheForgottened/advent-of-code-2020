@@ -4,7 +4,7 @@
 
 #define YEAR 2020
 
-void wishes() { return "Merry Christmas and a Happy 2021!"; };
+char* wishes() { return "Merry Christmas and a Happy 2021!"; };
 
 #endif /* ADVENT_OF_CODE_2020_H */
 ```

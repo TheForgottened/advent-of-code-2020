@@ -1,5 +1,5 @@
 ```c
-#ifndef
+#ifndef ADVENT_OF_CODE_2020_H
 #define ADVENT_OF_CODE_2020_H
 
 #define YEAR 2020

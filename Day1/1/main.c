@@ -11,7 +11,7 @@ int main() {
     fMain = fopen("input.txt", "r");
 
     if (fMain == NULL) {
-        printf("Erro na leitura do ficheiro %s!\n");
+        printf("Error reading the file input.txt!\n");
         return 0;
     }
 
@@ -19,7 +19,7 @@ int main() {
         fSecondary = fopen("input.txt", "r");
 
         if (fSecondary == NULL) {
-            printf("Erro na leitura do ficheiro %s!\n");
+            printf("Error reading the file input.txt!\n");
             return 0;
         }
 

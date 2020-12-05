@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define INPUT_FILE "input.txt"
+
+int checkValidID(char** fields) {
+    FILE *f;
+    char* file = NULL, *temp = NULL, buffer[256], c;
+    int totalValid, size = 0, lixo;
+
+    f = fopen(INPUT_FILE, "r");
+
+    if (f == NULL) {
+        printf("Error reading the file %s!\n", INPUT_FILE);
+        return 0;
+    }
+
+    while (fscanf(f, "%c", &c) == 1) {
+        temp = (char *)realloc(file, sizeof(char) * (size + 1));
+
+        if (temp == NULL) {
+            printf("Error allocating memory!\n");
+            free(temp);
+            file = NULL;
+            fclose(f);
+            size = 0;
+            return -1;
+        }
+
+        file = temp;
+        file[size++] = c;
+    }
+
+    file[size] = '\0';
+
+    printf("%s", file);
+}
+
+int main() {
+    char* fields[8] = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid"};
+    int nrValidID = checkValidID(fields);
+
+    return 0;
+}

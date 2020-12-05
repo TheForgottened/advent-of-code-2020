@@ -24,7 +24,7 @@ char* readFile(int *size, int *lineSize, int *totalLines) {
             if (temp == NULL) {
                 printf("Error allocating memory!\n");
                 free(temp);
-                free(rtrnValue);
+                rtrnValue = NULL;
                 fclose(f);
                 *size = 0;
                 *lineSize = 0;

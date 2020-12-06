@@ -64,7 +64,7 @@ BOOL checkField(char* const fieldName, char* const fieldData) {
 int checkValidID(char** fields) {
     FILE *f;
     char curFields[NR_FIELDS + 1][256] = {"\0"}, buffer[256], *token;
-    int totalValid = 0, i = 0, j, temp, lixo;
+    int totalValid = 0, i = 0, j, temp;
 
     f = fopen(INPUT_FILE, "r");
 

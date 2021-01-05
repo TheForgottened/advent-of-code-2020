@@ -13,6 +13,8 @@ char* wishes() { return "Merry Christmas and a Happy 2021!"; };
 
 This repository will be used to store my solution to all the puzzles using C only.
 
+Unfortunately this was abandoned in order to focus in college assignments.
+
 ---
 
 ### [About - Advent of Code 2020](https://adventofcode.com/2020/about)
